@@ -20,9 +20,17 @@ namespace AutoService.Controllers
         }
 
         // GET: Clients
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Client.ToListAsync());
+            var clients = from m in _context.Client
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                clients = clients.Where(s => s.Surname.Contains(searchString));
+            }
+
+            return View(await clients.ToListAsync());
         }
 
         // GET: Clients/Details/5

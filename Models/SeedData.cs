@@ -25,7 +25,7 @@ namespace AutoService.Models
                     {
                         Name = "Stewart",
                         Surname = "Mclean",
-                        Email = "congue.elit@nequeSed.ca",
+                        Email = "congue.elit@nequesed.ca",
                         Phone = "1 23 193 7006-5481"
                     },
 
@@ -42,7 +42,7 @@ namespace AutoService.Models
                         Name = "Macon",
                         Surname = "Young",
                         Email = "natoque.penatibus.et@adipiscing.ca",
-                        Phone = "	1 54 775 9874-5095"
+                        Phone = "1 54 775 9874-5095"
                     },
 
                     new Client
@@ -57,7 +57,7 @@ namespace AutoService.Models
                     {
                         Name = "Harding",
                         Surname = "Rich",
-                        Email = "turpis.Nulla@eleifendvitae.ca",
+                        Email = "turpis.nulla@eleifendvitae.ca",
                         Phone = "1 24 873 5282-3231"
                     },
 
@@ -81,7 +81,7 @@ namespace AutoService.Models
                     {
                         Name = "Kuame",
                         Surname = "Carney",
-                        Email = "ut.nisi@Nullamvelit.edu",
+                        Email = "ut.nisi@nullamvelit.edu",
                         Phone = "1 18 501 5497-6930"
                     },
 
