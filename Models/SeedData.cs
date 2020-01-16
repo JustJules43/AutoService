@@ -14,7 +14,7 @@ namespace AutoService.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<AutoServiceContext>>()))
             {
-                // Look for any movies.
+                // Look for any clients.
                 if (context.Client.Any())
                 {
                     return;   // DB has been seeded
@@ -101,6 +101,94 @@ namespace AutoService.Models
                         Phone = "1 98 290 2064-3416"
                     }
                 );
+
+                if (context.Car.Any())
+                {
+                    return;   // DB has been seeded
+                }
+
+                context.Car.AddRange(
+                    new Car
+                    {
+                        Brand = "BMW",
+                        Model = "320i",
+                        ProductionDate = DateTime.Parse("2001-4-12"),
+                        RegistrationNumber = "WZ 522SA",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Audi",
+                        Model = "A4",
+                        ProductionDate = DateTime.Parse("2009-12-01"),
+                        RegistrationNumber = "PO 245LA",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Honda",
+                        Model = "Accord",
+                        ProductionDate = DateTime.Parse("2018-6-20"),
+                        RegistrationNumber = "KR 908KO",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Toyota",
+                        Model = "Avensis",
+                        ProductionDate = DateTime.Parse("2009-4-25"),
+                        RegistrationNumber = "WB 748ZZ",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Mercedes",
+                        Model = "E220d",
+                        ProductionDate = DateTime.Parse("1999-3-13"),
+                        RegistrationNumber = "GD 232AD",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Citroen",
+                        Model = "Berlingo",
+                        ProductionDate = DateTime.Parse("2005-6-4"),
+                        RegistrationNumber = "GSP 374DA",
+                    },
+
+                    new Car
+                    {
+                        Brand = "BMW",
+                        Model = "530d",
+                        ProductionDate = DateTime.Parse("2011-8-10"),
+                        RegistrationNumber = "GA 128SL",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Lexus",
+                        Model = "IS",
+                        ProductionDate = DateTime.Parse("2011-8-10"),
+                        RegistrationNumber = "GA 128SL",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Nissan",
+                        Model = "Navara",
+                        ProductionDate = DateTime.Parse("2016-2-11"),
+                        RegistrationNumber = "ZS 694RS",
+                    },
+
+                    new Car
+                    {
+                        Brand = "Suzuki",
+                        Model = "Vitara",
+                        ProductionDate = DateTime.Parse("2008-3-2"),
+                        RegistrationNumber = "ZK 879HS",
+                    }
+                );
+
                 context.SaveChanges();
             }
         }

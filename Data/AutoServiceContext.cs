@@ -15,5 +15,6 @@ namespace AutoService.Data
         }
 
         public DbSet<Client> Client { get; set; }
+        public DbSet<Car> Car { get; set; }
     }
 }
